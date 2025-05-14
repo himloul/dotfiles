@@ -1,0 +1,96 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "explorer.confirmDragAndDrop": false,
+    "workbench.colorTheme": "Palenight Operator",
+    "git.autofetch": true,
+    "jupyter.widgetScriptSources": [
+        "jsdelivr.com",
+        "unpkg.com"
+    ],
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "code-runner.runInTerminal": true,
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "zsh"
+        },
+        "fish": {
+            "path": "fish"
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        }
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.editorAssociations": {
+        "{git,gitlens,conflictResolution,vscode-local-history}:/**/*.tc.json": "default",
+        "*.parquet": "default",
+        "*.png": "hediet.vscode-drawio"
+    },
+    "jupyter.askForKernelRestart": false,
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "cmake.showOptionsMovedNotification": false,
+    "workbench.editor.empty.hint": "hidden",
+    "editor.fontFamily": "Cascadia Code, Fira Code, Ubuntu Mono, Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "diffEditor.renderSideBySide": true,
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}"
+    },
+    "diffEditor.codeLens": true,
+    "workbench.activityBar.location": "bottom",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "editor.minimap.enabled": false,
+    "apc.electron": {
+        "frame": false,
+        // "titleBarStyle": "hidden",
+        // "opacity": 0.50,
+    },
+    "apc.font.family": "Cascadia Code",
+    "apc.monospace.font.family": "Cascadia Code",
+    "workbench.sideBar.location": "right",
+    "apc.header": {
+        "fontSize": 12
+    },
+    "window.zoomLevel": -1,
+    "window.title": "${rootName}",
+    // "window.titleBarStyle": "native",
+    // "activitusbar.alignment": "Right",
+    "editor.cursorStyle": "block-outline",
+    // File Explorer
+    "files.defaultLanguage": "${activeEditorLanguage}",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    // Terminal
+    "terminal.integrated.smoothScrolling": true,
+    "window.density.editorTabHeight": "compact",
+    "workbench.editor.editorActionsLocation": "titleBar",
+    "aws.telemetry": false,
+    "continue.telemetryEnabled": false,
+    "code-runner.enableAppInsights": false,
+    "telemetry.telemetryLevel": "off",
+    "update.mode": "none",
+    "makefile.configureOnOpen": false,
+    "continue.showInlineTip": false,
+    "markdown.styles": [],
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.layoutControl.enabled": false,
+    "window.commandCenter": false,
+    "window.menuBarVisibility": "compact",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+}
