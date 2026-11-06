@@ -45,8 +45,10 @@ cmd("Pi", function()
     vim.fn.termopen({ "cmd.exe", "/c", "pi --continue" }, { cwd = LazyVim.root() })
     pi_buf = vim.api.nvim_get_current_buf()
     vim.bo[pi_buf].bufhidden = "hide"
-    -- Ctrl+` hides it from inside the terminal (buffer-local, so toggleterm is unaffected)
-    vim.keymap.set("t", "<C-`>", "<C-\\><C-n><cmd>Pi<cr>", { buffer = pi_buf, desc = "Hide Pi" })
+    -- Ctrl+` hides Pi, in terminal and normal mode. Buffer-local, so toggleterm's
+    -- global <C-`> mapping cannot open a new terminal here.
+    vim.keymap.set("t", "<C-`>", "<cmd>Pi<cr>", { buffer = pi_buf, desc = "Hide Pi" })
+    vim.keymap.set("n", "<C-`>", "<cmd>Pi<cr>", { buffer = pi_buf, desc = "Hide Pi" })
   else
     vim.api.nvim_win_set_buf(0, pi_buf)
   end
