@@ -10,41 +10,16 @@ return {
       background = { light = "latte", dark = "mocha" },
       transparent_background = true,
     },
+    -- LazyVim applies the colorscheme before this plugin's setup() runs, so the
+    -- options above (transparency, auto flavour) are ignored. Apply it once more here.
     config = function(_, opts)
       require("catppuccin").setup(opts)
-      -- The startup colorscheme load ignores transparent_background here, so reapply once after startup
-      -- ponytail: drop this if the startup load honours transparent_background
-      vim.api.nvim_create_autocmd("VimEnter", {
-        once = true,
-        callback = function()
-          if vim.g.colors_name == "catppuccin" then vim.cmd.colorscheme("catppuccin") end
-        end,
-      })
+      vim.cmd.colorscheme("catppuccin")
     end,
   },
   { "LazyVim/LazyVim", opts = { colorscheme = "catppuccin" } },
   -- LazyVim's default theme, unused: Catppuccin is the only one in use
   { "folke/tokyonight.nvim", enabled = false },
-  {
-    -- Local override: catppuccin's bufferline palette falls back to mocha when
-    -- flavour is unset (auto), so the bar stays dark on a light editor.
-    -- Pick latte/mocha from vim.o.background for the bar only.
-    -- ponytail: remove once catppuccin/nvim fixes get_palette() for flavour=auto
-    "akinsho/bufferline.nvim",
-    optional = true,
-    opts = function(_, opts)
-      if not (vim.g.colors_name or ""):find("catppuccin") then return end
-      local ctp = require("catppuccin")
-      local flavour = vim.o.background == "light" and "latte" or "mocha"
-      local get_theme = require("catppuccin.special.bufferline").get_theme()
-      opts.highlights = function()
-        local prev = ctp.flavour
-        ctp.flavour = flavour
-        local ok, res = pcall(get_theme)
-        ctp.flavour = prev
-        if not ok then error(res) end
-        return res
-      end
-    end,
-  },
+  -- LazyVim themes bufferline for catppuccin itself (specs in lazyvim.plugins.colorscheme),
+  -- so no local override is needed.
 }

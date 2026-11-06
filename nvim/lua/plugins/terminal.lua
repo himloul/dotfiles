@@ -14,6 +14,7 @@ return {
       end,
       open_mapping = [[<C-`>]],
       direction = "horizontal",
+      -- interactive shell only; options.lua keeps cmd.exe for :! (much faster)
       shell = "pwsh",
       float_opts = { border = "curved", winblend = 10 },
       start_in_insert = true,
