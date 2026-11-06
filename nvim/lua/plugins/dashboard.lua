@@ -4,7 +4,7 @@ return {
     dashboard = {
       enabled = true, -- start screen
       preset = {
-        -- Your custom ASCII art header
+        -- Empty header: no ASCII art, the dashboard shows only its menu
         header = "",
       },
     },

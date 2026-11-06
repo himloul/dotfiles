@@ -4,7 +4,8 @@ Based on the [LazyVim starter](https://github.com/LazyVim/starter). Plugins are 
 
 ## Install on Windows
 
-1. Install the prerequisites: `winget install Neovim.Neovim Git.Git BurntSushi.ripgrep.MSVC sharkdp.fd`, plus a C compiler (`winget install MSYS2.MSYS2`) and Node.js if you use LSPs that need them.
+1. Install the prerequisites: `winget install Neovim.Neovim Git.Git BurntSushi.ripgrep.MSVC sharkdp.fd`, plus Node.js if you use LSPs that need it.
+   For the fzf extension (`telescope-fzf-native`) you also need `make` and a C compiler. Install MSYS2 (`winget install MSYS2.MSYS2`), open its UCRT64 shell, run `pacman -S make mingw-w64-ucrt-x86_64-gcc`, and add `C:\msys64\ucrt64\bin` to your PATH. Without them the extension is skipped and Telescope uses its slower default sorter.
 2. Link this folder into Neovim's config path (a junction needs no admin rights):
 
    ```powershell
@@ -19,7 +20,7 @@ Based on the [LazyVim starter](https://github.com/LazyVim/starter). Plugins are 
 
 - `init.lua`: entry point, loads `lua/config/lazy.lua`.
 - `lua/config/`: options, keymaps, autocmds, user commands.
-- `lua/plugins/`: one file per plugin group. `ai.lua.txt` is disabled; rename it to `ai.lua` to enable it. It has a key placeholder, so keep real keys out of the repo.
+- `lua/plugins/`: one file per plugin group.
 - `lazy-lock.json`: pinned plugin versions. Commit changes to it when you update plugins (`:Lazy update`).
 - `NEOVIM-GUIDE.md`: personal keybinding and usage notes.
 

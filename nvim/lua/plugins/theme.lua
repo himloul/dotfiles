@@ -23,6 +23,8 @@ return {
     end,
   },
   { "LazyVim/LazyVim", opts = { colorscheme = "catppuccin" } },
+  -- LazyVim's default theme, unused: Catppuccin is the only one in use
+  { "folke/tokyonight.nvim", enabled = false },
   {
     -- Local override: catppuccin's bufferline palette falls back to mocha when
     -- flavour is unset (auto), so the bar stays dark on a light editor.
