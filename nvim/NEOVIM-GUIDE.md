@@ -41,7 +41,7 @@
 | Switch buffer | `<leader>,` |
 | Next / previous buffer | `<S-l>` / `<S-h>` |
 | Terminal (PowerShell) | `<C-`>` |
-| Claude Code (full screen) | `<leader>a` |
+| Pi (full screen) | `<leader>a` |
 | Leave insert mode | `jk` |
 | Save | `<C-s>` (or `:w`) |
 | Quit | `:q` (`:qa` quits all) |
@@ -128,7 +128,7 @@
 - **Splits:** `:vsplit` (side by side), `:split` (stacked). Move between them with `<C-w>` then `h`/`j`/`k`/`l`. Close with `<C-w>c`.
 - **Buffers:** a buffer is an open file. `<leader>,` lists them, `<leader>bd` closes one.
 - **Terminal:** `<C-`>` toggles a PowerShell terminal at the bottom. Press `<C-`>` again to hide it. Inside a terminal you're typing into the program, so press `Ctrl+\` then `Ctrl+n` to reach normal mode, and `i` to type again.
-- **Claude Code:** `<leader>a` opens Claude full screen in a new tab, resuming a session in the project folder. Press `<leader>a` again, or `<C-`>` inside it, to hide it. The session keeps running.
+- **Pi:** `<leader>a` opens Pi full screen in a new tab, continuing a session in the project folder. Press `<leader>a` again, or `<C-`>` inside it, to hide it. The session keeps running.
 
 ---
 

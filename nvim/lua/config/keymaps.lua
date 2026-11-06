@@ -8,8 +8,8 @@ keymap("i", "jk", "<Esc>", { desc = "Exit insert mode" })
 -- Command palette: type to filter every command (built-in and your own)
 keymap("n", "<leader>p", function() Snacks.picker.commands() end, { desc = "Command palette" })
 
--- Claude Code: open full screen, press again to hide
-keymap("n", "<leader>a", "<cmd>Claude<cr>", { desc = "Claude Code" })
+-- Pi: open full screen, press again to hide
+keymap("n", "<leader>a", "<cmd>Pi<cr>", { desc = "Pi" })
 
 -- Copy the mouse selection to the Windows clipboard on release, keep it selected
 keymap("v", "<LeftRelease>", '"+ygv', { desc = "Copy selection on mouse release" })
