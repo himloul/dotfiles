@@ -9,7 +9,8 @@ Based on the [LazyVim starter](https://github.com/LazyVim/starter). Plugins are 
 2. Link this folder into Neovim's config path (a junction needs no admin rights):
 
    ```powershell
-   New-Item -ItemType Junction -Path "$env:LOCALAPPDATA\nvim" -Target "C:\Users\himloul\personal\projects\dotfiles\nvim"
+   # run from the dotfiles repo root, so the target is wherever you cloned it
+   New-Item -ItemType Junction -Path "$env:LOCALAPPDATA\nvim" -Target (Resolve-Path .\nvim).Path
    ```
 
    If `%LOCALAPPDATA%\nvim` already exists, move or delete it first.
