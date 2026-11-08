@@ -9,6 +9,11 @@ vim.o.shellxquote = '"'
 -- Truecolor for the Catppuccin theme
 vim.o.termguicolors = true
 
+-- Terminal tab title: 'title' is off by default, so the tab would keep saying "PowerShell 7".
+-- Folder, not filename: tabs map to projects, and the cwd basename is never empty.
+vim.o.title = true
+vim.o.titlestring = "nvim - %{fnamemodify(getcwd(), ':t')}"
+
 -- One file explorer only: neo-tree (instead of the default Snacks explorer)
 vim.g.lazyvim_explorer = "neo-tree"
 
