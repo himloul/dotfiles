@@ -1,0 +1,251 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions":
+    [
+        {
+            "command":
+            {
+                "action": "scrollToMark",
+                "direction": "next"
+            },
+            "id": "User.scrollToMark.2A0DA8E0"
+        },
+        {
+            "command":
+            {
+                "action": "scrollToMark",
+                "direction": "previous"
+            },
+            "id": "User.scrollToMark.D3F0B923"
+        },
+        {
+            "command":
+            {
+                "action": "selectOutput",
+                "direction": "next"
+            },
+            "id": "User.selectOutput.2A0DA8E0"
+        },
+        {
+            "command":
+            {
+                "action": "selectOutput",
+                "direction": "prev"
+            },
+            "id": "User.selectOutput.D3F0B923"
+        }
+    ],
+    "copyFormatting": "none",
+    "copyOnSelect": true,
+    "defaultProfile": "{2b9f6c1e-4d3a-4f87-9c22-5a1d8e6b0f43}",
+    "disabledProfileSources":
+    [
+        "Windows.Terminal.Wsl",
+        "Windows.Terminal.VisualStudio",
+        "Microsoft.WSL",
+        "Windows.Terminal.Azure",
+        "Windows.Terminal.PowershellCore"
+    ],
+    "keybindings":
+    [
+        {
+            "id": "Terminal.SplitPaneDown",
+            "keys": "alt+shift+down"
+        },
+        {
+            "id": "Terminal.CopyToClipboard",
+            "keys": "ctrl+c"
+        },
+        {
+            "id": "Terminal.MoveFocusRight",
+            "keys": "alt+right"
+        },
+        {
+            "id": "Terminal.TogglePaneZoom",
+            "keys": "alt+shift+z"
+        },
+        {
+            "id": "Terminal.PasteFromClipboard",
+            "keys": "ctrl+v"
+        },
+        {
+            "id": "Terminal.DuplicatePaneAuto",
+            "keys": "alt+shift+d"
+        },
+        {
+            "id": "Terminal.SplitPaneRight",
+            "keys": "alt+shift+right"
+        },
+        {
+            "id": "Terminal.MoveFocusLeft",
+            "keys": "alt+left"
+        },
+        {
+            "id": "Terminal.ClearBuffer",
+            "keys": "ctrl+l"
+        },
+        {
+            "id": "Terminal.ToggleFocusMode",
+            "keys": "f11"
+        },
+        {
+            "id": "Terminal.SearchWeb",
+            "keys": "ctrl+shift+e"
+        },
+        {
+            "id": "User.scrollToMark.D3F0B923",
+            "keys": "ctrl+up"
+        },
+        {
+            "id": "User.scrollToMark.2A0DA8E0",
+            "keys": "ctrl+down"
+        },
+        {
+            "id": "User.selectOutput.D3F0B923",
+            "keys": "ctrl+shift+up"
+        },
+        {
+            "id": "User.selectOutput.2A0DA8E0",
+            "keys": "ctrl+shift+down"
+        }
+    ],
+    "launchMode": "maximized",
+    "newTabMenu":
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles":
+    {
+        "defaults":
+        {
+            "autoMarkPrompts": true,
+            "colorScheme":
+            {
+                "dark": "One Half Dark",
+                "light": "One Half Light"
+            },
+            "font":
+            {
+                "face": "JetBrainsMono Nerd Font",
+                "size": 10
+            },
+            "padding": "0",
+            "rightClickContextMenu": true,
+            "scrollbarState": "hidden",
+            "showMarksOnScrollbar": true
+        },
+        "list":
+        [
+            {
+                "commandline": "pwsh.exe",
+                "guid": "{2b9f6c1e-4d3a-4f87-9c22-5a1d8e6b0f43}",
+                "hidden": false,
+                "name": "PowerShell 7",
+                "startingDirectory": "%USERPROFILE%"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt"
+            },
+            {
+                "commandline": "wsl.exe -d Ubuntu",
+                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "startingDirectory": "~"
+            },
+            {
+                "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64",
+                "guid": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
+                "icon": "C:/msys64/ucrt64.ico",
+                "name": "UCRT64 / MSYS2",
+                "startingDirectory": "C:/msys64/home/%USERNAME%"
+            },
+            {
+                "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -msys",
+                "guid": "{71160544-14d8-4194-af25-d05feeac7233}",
+                "icon": "C:/msys64/msys2.ico",
+                "name": "MSYS / MSYS2",
+                "startingDirectory": "C:/msys64/home/%USERNAME%"
+            },
+            {
+                "commandline": "C:/devkitPro/msys2/msys2_shell.cmd -defterm -here -no-start -msys",
+                "guid": "{81160544-14d8-4194-af25-d05feeac7233}",
+                "icon": "C:/devkitPro/msys2/msys2.ico",
+                "name": "MSYS DevkitPro",
+                "startingDirectory": "C:/msys64/home/%USERNAME%"
+            }
+        ]
+    },
+    "schemes": [],
+    "snapToGridOnResize": true,
+    "tabSwitcherMode": "mru",
+    "tabWidthMode": "equal",
+    "theme":
+    {
+        "dark": "Pane Dark",
+        "light": "Pane Light"
+    },
+    "themes":
+    [
+        {
+            "name": "Pane Dark",
+            "tab":
+            {
+                "background": "terminalBackground",
+                "iconStyle": "default",
+                "showCloseButton": "always",
+                "unfocusedBackground": "terminalBackground"
+            },
+            "tabRow":
+            {
+                "background": "terminalBackground",
+                "unfocusedBackground": "terminalBackground"
+            },
+            "window":
+            {
+                "applicationTheme": "dark",
+                "experimental.rainbowFrame": false,
+                "frame": null,
+                "unfocusedFrame": null,
+                "useMica": false
+            }
+        },
+        {
+            "name": "Pane Light",
+            "tab":
+            {
+                "background": "terminalBackground",
+                "iconStyle": "default",
+                "showCloseButton": "always",
+                "unfocusedBackground": "terminalBackground"
+            },
+            "tabRow":
+            {
+                "background": "terminalBackground",
+                "unfocusedBackground": "terminalBackground"
+            },
+            "window":
+            {
+                "applicationTheme": "light",
+                "experimental.rainbowFrame": false,
+                "frame": null,
+                "unfocusedFrame": null,
+                "useMica": false
+            }
+        }
+    ],
+    "warning.largePaste": true,
+    "wordDelimiters": " /\\()[]{}\"'\u2502<>~`"
+}
