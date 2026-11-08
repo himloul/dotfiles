@@ -1,7 +1,7 @@
 # Neovim Guide (LazyVim, Windows)
 
 > `<leader>` is **Space**. `<C-x>` means Ctrl+x, `<S-x>` means Shift+x.
-> Not sure of a key? Press `<leader>` and wait (which-key shows the menu), or run `:Telescope keymaps`.
+> Not sure of a key? Press `<leader>` and wait (which-key shows the menu), or press `<leader>sk` to search keymaps.
 
 ---
 
@@ -85,7 +85,7 @@
 - `<leader><space>`: find a file in the project.
 - `<leader>/`: grep the project for text.
 - `<leader>fp`: find files inside plugin folders (rarely needed).
-- In a Telescope list: type to filter, `<C-j>` / `<C-k>` to move, `Enter` to open, `Esc` to close.
+- In a picker list: type to filter, `<C-j>` / `<C-k>` to move, `Enter` to open, `Esc` to close.
 
 **File tree (neo-tree)**
 - `<leader>e` toggles the tree.
@@ -170,7 +170,6 @@ Restart Neovim and it appears in `<leader>p`.
 | `lua/plugins/mason.lua` | Tools Mason installs automatically |
 | `lua/plugins/ruff.lua` | Python linting and formatting (Ruff) |
 | `lua/plugins/terminal.lua` | Terminal toggle and PowerShell |
-| `lua/plugins/telescope*.lua` | Search (Telescope) options |
 | `lua/plugins/dashboard.lua` | Start screen header |
 
 **Useful maintenance commands**
@@ -198,5 +197,5 @@ Restart Neovim and it appears in `<leader>p`.
 
 ## 10. Starting over safely
 
-- Your original config is backed up at `C:\Users\himloul\AppData\Local\Temp\nvim_backup_142711` (the Temp folder can be cleared by Windows, so copy it elsewhere if you need it).
+- Your old config (before this LazyVim setup) is not backed up anywhere reliable. If you want a safety net, copy the whole `nvim` folder somewhere before making large changes.
 - To undo a single change, edit the file and remove the lines you added.

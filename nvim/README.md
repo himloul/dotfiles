@@ -5,7 +5,6 @@ Based on the [LazyVim starter](https://github.com/LazyVim/starter). Plugins are 
 ## Install on Windows
 
 1. Install the prerequisites: `winget install Neovim.Neovim Git.Git BurntSushi.ripgrep.MSVC sharkdp.fd`, plus Node.js if you use LSPs that need it.
-   For the fzf extension (`telescope-fzf-native`) you also need `make` and a C compiler. Install MSYS2 (`winget install MSYS2.MSYS2`), open its UCRT64 shell, run `pacman -S make mingw-w64-ucrt-x86_64-gcc`, and add `C:\msys64\ucrt64\bin` to your PATH. Without them the extension is skipped and Telescope uses its slower default sorter.
 2. Link this folder into Neovim's config path (a junction needs no admin rights):
 
    ```powershell

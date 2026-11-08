@@ -8,6 +8,10 @@ keymap("i", "jk", "<Esc>", { desc = "Exit insert mode" })
 -- Command palette: type to filter every command (built-in and your own)
 keymap("n", "<leader>p", function() Snacks.picker.commands() end, { desc = "Command palette" })
 
+keymap("n", "<leader>fp", function() Snacks.picker.files({ cwd = require("lazy.core.config").options.root }) end, {
+  desc = "Find Plugin File",
+})
+
 -- Pi: open full screen, press again to hide
 keymap("n", "<leader>a", "<cmd>Pi<cr>", { desc = "Pi" })
 
